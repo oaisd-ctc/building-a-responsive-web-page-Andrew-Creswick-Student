@@ -1,25 +1,30 @@
 body {
     background-color: lightblue;
-    margin:auto;
+    margin: auto;
 }
+
 nav {
     background-color: lightgreen;
-    margin:auto;
-    display:flex;
+    margin: auto;
+    display: flex;
     height: auto;
+    flex-direction: row;
 }
-nav > a {
-    flex:1;
-    flex-direction:row;
-    padding: 10px;
+
+nav>a {
+    flex: 1;
+
+    width: 25px;
     margin: auto;
     text-align: center;
     width: auto;
 }
+
 #AboutMe {
     text-align: center;
     background-color: lime;
 }
+
 #Projects {
     display: flex;
     margin: auto;
@@ -28,14 +33,82 @@ nav > a {
     justify-content: center;
     align-items: center;
 }
+
 .projCard {
     flex: 1;
     margin: 20px;
     padding: 10px;
     border: 5px;
     width: 80%;
-    background-color: greenyellow;
+    background-color: #FFF9A5;
     text-align: center;
     border-style: solid;
-    
+}
+.projCard:hover {
+        transition: 0.2s;
+        background-color: #12F9B9;
+}
+@media screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+        margin: auto;
+    }
+
+    nav {
+        background-color: lightgreen;
+        margin: auto;
+        display: flex;
+        height: auto;
+        flex-direction: column;
+    }
+
+    nav>a {
+        flex: 1;
+        width: 25px;
+        margin: auto;
+        text-align: center;
+        width: auto;
+    }
+
+    #AboutMe {
+        text-align: center;
+        background-color: lime;
+    }
+
+    #Projects {
+        display: flex;
+        margin: auto;
+        padding:10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projCard {
+        flex: 1;
+        margin: 20px;
+        padding: 10px;
+        border: 5px;
+        width: 60%;
+        background-color: #CCDDD3;
+        text-align: center;
+        border-style: solid;
+    }
+    .projCard:hover {
+        transition: 0.2s;
+        background-color: #1FF9F9;
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width:501px) {
+    nav {
+        flex-direction: row;
+    }
+    .projCard {
+        background-color:  #AFC2D5;
+    }
+    .projCard:hover {
+        transition: 0.2s;
+        background-color: #FF1FF1;
+    }
 }
